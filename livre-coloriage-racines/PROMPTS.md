@@ -28,7 +28,7 @@ an African grandmother sitting on a chair braiding the hair of a smiling little 
 ## 03 — Au marché, il y a plein de fruits ! → `images/03.png`
 
 ```
-a colorful African open-air market stall with a smiling woman selling bananas, pineapples, mangoes and papayas in baskets, a child pointing at the fruits, black and white coloring page for children aged 4-8, thick clean black outlines, simple large shapes, no shading, no gray, no color, pure white background, cute friendly cartoon style, full page illustration, no text
+a busy African open-air market stall with a smiling woman selling bananas, pineapples, mangoes and papayas in baskets, a child pointing at the fruits, black and white coloring page for children aged 4-8, thick clean black outlines, simple large shapes, no shading, no gray, no color, pure white background, cute friendly cartoon style, full page illustration, no text
 ```
 
 ## 04 — Le joli pagne wax de maman. → `images/04.png`
