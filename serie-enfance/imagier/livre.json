@@ -1,0 +1,323 @@
+{
+ "titre": "Quand papa et maman étaient petits",
+ "sous_titre": "L'imagier à colorier de l'enfance africaine de tes parents — 50 objets des années 1990-2010",
+ "titre_en": "When Mom and Dad Were Little",
+ "auteur": "VOTRE NOM D'AUTEUR",
+ "annee": 2026,
+ "bandeau": "50 objets à colorier  •  Une question pour papa et maman",
+ "age": "Dès 4 ans  •  Ages 4+",
+ "style_prompt": "black and white coloring page for children, one single object centered and large, thick clean black outlines, simple shapes, no shading, no gray, pure white background, no text, no letters, no numbers, no logo, no brand name",
+ "prompt_couverture": "colorful joyful children's book cover illustration, a smiling African child coloring a book at a table while mom and dad watch, surrounded by 1990s objects: a portable radio, a cassette, a bicycle, a hurricane lamp, an old mobile phone, a football, bright colors, wax fabric patterns, cute cartoon style, square format, no text",
+ "quatrieme": {
+  "titre": "Colorie l'enfance de tes parents !",
+  "fr": "La radio de papa, la marmite de maman, la lampe tempête des devoirs, la voiture en fil de fer… 50 objets qui ont marqué l'enfance de tes parents en Afrique. Sur chaque page, une question à leur poser : colorie pendant qu'ils te racontent !",
+  "en": "Dad's radio, mom's cooking pot, the homework lamp, the wire toy car… 50 objects from your parents' African childhood, each with a question to ask them while you color.",
+  "puces": [
+   "• 50 objets, un seul par page",
+   "• Une question à poser à papa ou maman",
+   "• Dos des pages blanc : pas de feutre qui traverse"
+  ]
+ },
+ "pages": [
+  {
+   "fr": "Radio portable",
+   "en": "Portable radio",
+   "question": "Papa, tu écoutais quoi à la radio ?",
+   "prompt": "an old portable transistor radio with a telescopic antenna, round speaker grille and tuning dial"
+  },
+  {
+   "fr": "Cassette audio",
+   "en": "Audio cassette",
+   "question": "Maman, quelle était ta chanson préférée ?",
+   "prompt": "an audio cassette tape with its two reels and a blank label"
+  },
+  {
+   "fr": "Magnétophone",
+   "en": "Tape recorder",
+   "question": "Papa, tu écoutais quoi sur ton magnétophone ?",
+   "prompt": "a big 1990s double cassette boombox with two round speakers and a carrying handle"
+  },
+  {
+   "fr": "Cassette vidéo",
+   "en": "Video tape",
+   "question": "Maman, quel film tu regardais souvent ?",
+   "prompt": "a VHS video cassette tape with a blank label"
+  },
+  {
+   "fr": "Télévision",
+   "en": "Television",
+   "question": "Papa, quelle émission ne manquais-tu jamais ?",
+   "prompt": "an old box television set with rabbit-ear antenna and round knobs"
+  },
+  {
+   "fr": "Téléphone fixe",
+   "en": "Landline phone",
+   "question": "Maman, à qui téléphonais-tu le plus souvent ?",
+   "prompt": "an old landline desk telephone with a curly cord and big push buttons"
+  },
+  {
+   "fr": "Téléphone portable",
+   "en": "Mobile phone",
+   "question": "Papa, c'était quoi ton premier téléphone ?",
+   "prompt": "a small old 2000s mobile phone with a little screen and number keypad, no brand name"
+  },
+  {
+   "fr": "Vélo",
+   "en": "Bicycle",
+   "question": "Maman, où allais-tu avec ton vélo ?",
+   "prompt": "an old sturdy bicycle with a rear luggage rack and a front lamp"
+  },
+  {
+   "fr": "Moto",
+   "en": "Motorbike",
+   "question": "Papa, quelle était ta première moto ?",
+   "prompt": "a small classic motorbike seen from the side"
+  },
+  {
+   "fr": "Voiture",
+   "en": "Car",
+   "question": "Maman, quelle voiture faisait rêver à l'époque ?",
+   "prompt": "a 1990s family sedan car seen from three-quarter view, no logo"
+  },
+  {
+   "fr": "Cartable",
+   "en": "School bag",
+   "question": "Papa, comment était ton cartable ?",
+   "prompt": "an old leather school satchel with two buckles and a handle"
+  },
+  {
+   "fr": "Cahier",
+   "en": "Exercise book",
+   "question": "Maman, quelle matière préférais-tu à l'école ?",
+   "prompt": "an open school exercise book with lines and a pencil on it"
+  },
+  {
+   "fr": "Trousse",
+   "en": "Pencil case",
+   "question": "Papa, quels étaient tes stylos préférés ?",
+   "prompt": "a zipped pencil case with pens and pencils sticking out"
+  },
+  {
+   "fr": "Règle et équerre",
+   "en": "Ruler and set square",
+   "question": "Maman, tu aimais bien dessiner ?",
+   "prompt": "a ruler, a set square and a protractor"
+  },
+  {
+   "fr": "Uniforme scolaire",
+   "en": "School uniform",
+   "question": "Papa, comment était ton uniforme ?",
+   "prompt": "an African school uniform: short-sleeved shirt and pleated skirt on a hanger"
+  },
+  {
+   "fr": "Ballon de foot",
+   "en": "Football",
+   "question": "Maman, quelle était ton équipe préférée ?",
+   "prompt": "a classic football with pentagon patches"
+  },
+  {
+   "fr": "Console de jeux",
+   "en": "Game console",
+   "question": "Papa, à quel jeu jouais-tu le plus ?",
+   "prompt": "a 1990s home video game console with a wired controller, no logo"
+  },
+  {
+   "fr": "Animal virtuel de poche",
+   "en": "Pocket virtual pet",
+   "question": "Maman, avais-tu un petit animal virtuel ?",
+   "prompt": "an egg-shaped pocket virtual pet toy on a keychain with three buttons and a tiny screen showing a cute creature, no logo"
+  },
+  {
+   "fr": "Jeu électronique",
+   "en": "Handheld game",
+   "question": "Papa, quel était ton jeu préféré ?",
+   "prompt": "a handheld brick game console with a small screen and buttons, no text"
+  },
+  {
+   "fr": "Patins à roulettes",
+   "en": "Roller skates",
+   "question": "Maman, tu en as déjà fait ?",
+   "prompt": "a pair of old quad roller skates with laces"
+  },
+  {
+   "fr": "Baladeur",
+   "en": "Cassette player",
+   "question": "Papa, quelle musique écoutais-tu en marchant ?",
+   "prompt": "a portable cassette player with over-ear headphones, no brand"
+  },
+  {
+   "fr": "Thermos",
+   "en": "Thermos flask",
+   "question": "Maman, tu emportais quoi dans ton thermos ?",
+   "prompt": "a tall thermos flask decorated with big flowers"
+  },
+  {
+   "fr": "Réfrigérateur",
+   "en": "Fridge",
+   "question": "Papa, qu'est-ce qu'il y avait souvent dedans ?",
+   "prompt": "an old two-door refrigerator"
+  },
+  {
+   "fr": "Marmite à pression",
+   "en": "Pressure cooker",
+   "question": "Maman, tu l'utilisais souvent ?",
+   "prompt": "a pressure cooker pot with its lid and valve"
+  },
+  {
+   "fr": "Réchaud à gaz",
+   "en": "Gas stove",
+   "question": "Papa, tu cuisinais au gaz ou au charbon ?",
+   "prompt": "a two-burner table gas stove with knobs"
+  },
+  {
+   "fr": "Foyer à charbon",
+   "en": "Charcoal stove",
+   "question": "Maman, tu cuisinais au charbon ?",
+   "prompt": "a round metal African charcoal stove on legs with glowing charcoal pieces"
+  },
+  {
+   "fr": "Mortier et pilon",
+   "en": "Mortar and pestle",
+   "question": "Papa, tu pilais quoi le plus souvent ?",
+   "prompt": "a big African wooden mortar with a long pestle"
+  },
+  {
+   "fr": "Panier",
+   "en": "Basket",
+   "question": "Maman, tu en utilisais pour quoi ?",
+   "prompt": "a woven round market basket"
+  },
+  {
+   "fr": "Bassine",
+   "en": "Basin",
+   "question": "Papa, tu l'utilisais pour quoi ?",
+   "prompt": "a large round metal washing basin"
+  },
+  {
+   "fr": "Bol en aluminium",
+   "en": "Aluminium bowl",
+   "question": "Maman, quel plat préférais-tu manger dans ce bol ?",
+   "prompt": "a simple round aluminium bowl"
+  },
+  {
+   "fr": "Cuillère en bois",
+   "en": "Wooden spoon",
+   "question": "Papa, tu préférais le bois ou le métal ?",
+   "prompt": "a long wooden cooking spoon"
+  },
+  {
+   "fr": "Assiette émaillée",
+   "en": "Enamel plate",
+   "question": "Maman, quelle était ta vaisselle préférée ?",
+   "prompt": "an enamel plate with a flower pattern on the rim"
+  },
+  {
+   "fr": "Bouteille en verre",
+   "en": "Glass bottle",
+   "question": "Papa, quelle boisson aimais-tu le plus ?",
+   "prompt": "an old-style glass soda bottle with a cap, no label"
+  },
+  {
+   "fr": "Casier de boissons",
+   "en": "Crate of drinks",
+   "question": "Maman, quelle boisson buvait-on aux fêtes ?",
+   "prompt": "a wooden crate full of glass soda bottles, no logo, no text"
+  },
+  {
+   "fr": "Pain",
+   "en": "Bread",
+   "question": "Papa, où achetais-tu le pain ?",
+   "prompt": "a long French baguette bread"
+  },
+  {
+   "fr": "Marché",
+   "en": "Market",
+   "question": "Maman, quel était ton marché préféré ?",
+   "prompt": "an African open-air market stall with baskets of tomatoes, plantains and onions under a parasol"
+  },
+  {
+   "fr": "Journal",
+   "en": "Newspaper",
+   "question": "Papa, quel journal lisais-tu ?",
+   "prompt": "a folded newspaper with blank columns and a picture, no readable text"
+  },
+  {
+   "fr": "Voiture en fil de fer",
+   "en": "Wire toy car",
+   "question": "Maman, tu fabriquais tes jouets avec quoi ?",
+   "prompt": "a handmade African toy car made of wire and tin can wheels with a long steering stick"
+  },
+  {
+   "fr": "Salon de coiffure",
+   "en": "Hair salon",
+   "question": "Papa, comment s'appelait ton coiffeur ?",
+   "prompt": "a small African neighbourhood barber chair with a mirror and clippers"
+  },
+  {
+   "fr": "Pagne",
+   "en": "Wax print dress",
+   "question": "Maman, quelle était ta tenue préférée ?",
+   "prompt": "an African wax print dress with large bold patterns to color"
+  },
+  {
+   "fr": "Ventilateur",
+   "en": "Fan",
+   "question": "Papa, tu l'utilisais souvent ?",
+   "prompt": "an old table fan with a round grille"
+  },
+  {
+   "fr": "Machine à coudre",
+   "en": "Sewing machine",
+   "question": "Maman, tu cousais quoi le plus souvent ?",
+   "prompt": "an old manual sewing machine with a hand wheel"
+  },
+  {
+   "fr": "Ampoule",
+   "en": "Light bulb",
+   "question": "Papa, y avait-il souvent de l'électricité ?",
+   "prompt": "a classic light bulb hanging from a wire"
+  },
+  {
+   "fr": "Lampe tempête",
+   "en": "Hurricane lamp",
+   "question": "Maman, tu faisais tes devoirs à la lampe ?",
+   "prompt": "a kerosene hurricane lantern with a glass chimney and handle"
+  },
+  {
+   "fr": "Ardoise et craie",
+   "en": "Slate and chalk",
+   "question": "Papa, tu écrivais quoi sur ton ardoise ?",
+   "prompt": "a school slate with a wooden frame and a piece of chalk"
+  },
+  {
+   "fr": "Bidon d'eau",
+   "en": "Water jerrycan",
+   "question": "Maman, où allais-tu chercher l'eau ?",
+   "prompt": "a 20 liter plastic water jerrycan with a cap and handle"
+  },
+  {
+   "fr": "Poule",
+   "en": "Hen",
+   "question": "Papa, tu élevais des poules ?",
+   "prompt": "a hen with her little chicks"
+  },
+  {
+   "fr": "Chèvre",
+   "en": "Goat",
+   "question": "Maman, tu en avais à la maison ?",
+   "prompt": "a cute goat standing"
+  },
+  {
+   "fr": "Moustiquaire",
+   "en": "Mosquito net",
+   "question": "Papa, tu dormais sous moustiquaire ?",
+   "prompt": "a bed with a mosquito net hanging over it"
+  },
+  {
+   "fr": "Tam-tam",
+   "en": "Drum",
+   "question": "Maman, tu dansais sur quel rythme ?",
+   "prompt": "an African djembe drum with ropes"
+  }
+ ]
+}

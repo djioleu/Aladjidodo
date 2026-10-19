@@ -6,6 +6,7 @@ Usage :
     python3 generer.py interieur    -> sortie/interieur.pdf
     python3 generer.py couverture   -> sortie/couverture.pdf
     python3 generer.py tout         -> les trois
+    python3 generer.py tout DOSSIER -> idem pour le livre décrit dans DOSSIER/livre.json
 
 Les illustrations se placent dans images/ : 01.png, 02.png, ... (ou .jpg),
 et images/couverture.png pour l'illustration (en couleur) de la couverture.
@@ -30,8 +31,9 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen.canvas import Canvas
 
 ICI = Path(__file__).resolve().parent
-IMAGES = ICI / "images"
-SORTIE = ICI / "sortie"
+LIVRE = Path(sys.argv[2]).resolve() if len(sys.argv) > 2 else ICI
+IMAGES = LIVRE / "images"
+SORTIE = LIVRE / "sortie"
 
 LARGEUR, HAUTEUR = 8.5 * inch, 11 * inch
 MARGE = 0.5 * inch          # KDP exige au moins 0,375" côté reliure et 0,25" ailleurs
@@ -52,7 +54,7 @@ CREME = Color(1.0, 0.96, 0.86)
 
 
 def charger_livre():
-    return json.loads((ICI / "livre.json").read_text(encoding="utf-8"))
+    return json.loads((LIVRE / "livre.json").read_text(encoding="utf-8"))
 
 
 def trouver_image(nom):
@@ -127,9 +129,11 @@ def generer_prompts(livre):
         "## Couverture (en couleur) → `images/couverture.png`",
         "",
         "```",
-        "colorful joyful children's book cover illustration, a smiling African girl and boy "
-        "hugging a baobab tree in the savanna, a lion, an elephant, a giraffe and a parrot around "
-        "them, bold bright colors, wax fabric patterns, cute cartoon style, square format, no text",
+        livre.get("prompt_couverture",
+                  "colorful joyful children's book cover illustration, a smiling African girl and boy "
+                  "hugging a baobab tree in the savanna, a lion, an elephant, a giraffe and a parrot "
+                  "around them, bold bright colors, wax fabric patterns, cute cartoon style, square "
+                  "format, no text"),
         "```",
         "",
     ]
@@ -142,7 +146,7 @@ def generer_prompts(livre):
             "```",
             "",
         ]
-    (ICI / "PROMPTS.md").write_text("\n".join(out), encoding="utf-8")
+    (LIVRE / "PROMPTS.md").write_text("\n".join(out), encoding="utf-8")
     print("PROMPTS.md créé")
 
 
@@ -208,8 +212,13 @@ def page_dessin(c, numero, page):
         c.drawImage(str(tampon), x + (l - l_img) / 2, y + (h - h_img) / 2, l_img, h_img)
     else:
         cadre_manquant(c, x, y, l, h, f"Dessin {numero:02d} à ajouter")
-    texte_centre(c, "Texte", 34, MARGE + 0.85 * inch, page["fr"])
-    texte_centre(c, "Texte", 24, MARGE + 0.35 * inch, page["en"], GRIS)
+    if page.get("question"):
+        texte_centre(c, "Titre", 30, MARGE + 1.05 * inch, page["fr"])
+        texte_centre(c, "Texte", 20, MARGE + 0.7 * inch, page["en"], GRIS)
+        texte_centre(c, "Texte", 22, MARGE + 0.2 * inch, page["question"])
+    else:
+        texte_centre(c, "Texte", 34, MARGE + 0.85 * inch, page["fr"])
+        texte_centre(c, "Texte", 24, MARGE + 0.35 * inch, page["en"], GRIS)
     c.showPage()
     return chemin is not None
 
@@ -328,7 +337,7 @@ def generer_couverture(livre, nb_pages):
     texte_centre(c, "Titre", 30, total_h - securite - 1.55 * inch, livre["titre_en"], INDIGO,
                  l_bandeau - 30, cx)
     texte_centre(c, "Texte", 22, total_h - securite - 2.15 * inch,
-                 "Livre de coloriage bilingue  •  Bilingual coloring book", black,
+                 livre.get("bandeau", "Livre de coloriage bilingue  •  Bilingual coloring book"), black,
                  l_bandeau - 30, cx)
 
     zone_l, zone_h = l_bandeau, 5.6 * inch
@@ -348,7 +357,7 @@ def generer_couverture(livre, nb_pages):
                        "Illustration de couverture")
 
     bandeau(c, x0 + marge_int, securite + 0.1 * inch, l_bandeau, 1.1 * inch)
-    texte_centre(c, "Titre", 24, securite + 0.75 * inch, "4 - 8 ans  •  4 - 8 years", VERT,
+    texte_centre(c, "Titre", 24, securite + 0.75 * inch, livre.get("age", "4 - 8 ans  •  4 - 8 years"), VERT,
                  l_bandeau - 30, cx)
     texte_centre(c, "Texte", 20, securite + 0.3 * inch, livre["auteur"], black, l_bandeau - 30, cx)
 
@@ -359,15 +368,17 @@ def generer_couverture(livre, nb_pages):
     bas = securite + 1.7 * inch
     bandeau(c, bx, bas, bl, haut - bas)
     y = haut - 0.7 * inch
-    texte_centre(c, "Titre", 30, y, "Colorie l'Afrique !", TERRE, bl - 40, bx + bl / 2)
+    quatrieme = livre.get("quatrieme", {})
+    texte_centre(c, "Titre", 30, y, quatrieme.get("titre", "Colorie l'Afrique !"), TERRE, bl - 40,
+                 bx + bl / 2)
     y -= 0.6 * inch
-    paragraphe_fr = (
+    paragraphe_fr = quatrieme.get("fr") or (
         "Les lions de la savane, le marché plein de fruits, le pagne wax de maman, le taxi "
         "jaune de la ville et les contes de papi sous la lune : 30 grands dessins pour "
         "découvrir et aimer l'Afrique, avec une phrase simple en français et en anglais "
         "sur chaque page."
     )
-    paragraphe_en = (
+    paragraphe_en = quatrieme.get("en") or (
         "Lions of the savanna, a busy fruit market, mom's wax fabric, the yellow city taxi "
         "and grandpa's stories under the moon: 30 big drawings to discover and love Africa, "
         "with a simple sentence in French and English on every page."
@@ -379,7 +390,7 @@ def generer_couverture(livre, nb_pages):
             c.drawString(bx + 0.4 * inch, y, ligne)
             y -= 26
         y -= 18
-    for puce in (
+    for puce in quatrieme.get("puces") or (
         "• 30 dessins uniques, un seul par page",
         "• Dos des pages blanc : pas de feutre qui traverse",
         "• Grand format 21,6 x 27,9 cm",
